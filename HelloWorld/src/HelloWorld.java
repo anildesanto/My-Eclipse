@@ -12,6 +12,7 @@ public class HelloWorld
 		printResult(blackJack(10,25));
 		printResult(uniqueSum(3,2,3));
 		printResult(tooHot(90,true));
+		
 	}
 	
 	private static void printResult(String text)
