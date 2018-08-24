@@ -2,7 +2,7 @@
 public class Darrays 
 {
 
-	int[][] firstArray = { { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 }, { 4, 5, 6 }, { 5, 6, 7 }, { 6, 7, 8 }, { 7, 8, 9 } };
+	private int[][] firstArray = { { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 }, { 4, 5, 6 }, { 5, 6, 7 }, { 6, 7, 8 }, { 7, 8, 9 } };
 
 	public void twoDArrays() 
 	{
@@ -56,7 +56,7 @@ public class Darrays
 
 	public void whenTheIndexAndElementAreSame() 
 	{
-		int nums[] = { 1, 2, 3, 4, 5 };
+		int nums[] = { 1, 2, 45, 4, 5 };
 		for (int i : nums) 
 		{
 			for (int j = 0; j < nums.length; ++j) 

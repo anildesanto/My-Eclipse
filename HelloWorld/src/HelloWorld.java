@@ -12,6 +12,12 @@ public class HelloWorld
 		printResult(blackJack(10,25));
 		printResult(uniqueSum(3,2,3));
 		printResult(tooHot(90,true));
+		Darrays darray = new Darrays();
+		//arrays
+		System.out.println("--------------------------------------");
+		//darray.twoDArraysMoreColumns();
+		darray.twoDArraysMoreRows();
+		darray.whenTheIndexAndElementAreSame();
 		
 	}
 	
