@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.text.DecimalFormat;
 
 public class Compass 
 {
@@ -21,7 +22,7 @@ public class Compass
 	}
 	public void getInput(String direction)
 	{
-		System.out.println("\nWhere do you want to go? north, south, east or west?");
+		System.out.println("\nWhere do you want to go now? north, south, east or west?");
 		switch (direction)
 		{
 			case "north" :
@@ -78,6 +79,8 @@ public class Compass
 				}
 			}
 		}
+
+		DecimalFormat df = new DecimalFormat("0.00");
 		distance = closesItem.distanceCheck(player);
 		itemName = closesItem.getName();
 		if(distance == 0)
@@ -91,7 +94,7 @@ public class Compass
 			gameWorld.addRemoveFromSwamp(closesItem);
 		}
 		else
-			textToPrfloat = "The Compass reads " + distance + "m" + " The item name is " + itemName;
+			textToPrfloat = "The Compass reads " + df.format(distance) + "m" + " The item name is " + itemName;
 		
 		System.out.println(textToPrfloat);
 	}

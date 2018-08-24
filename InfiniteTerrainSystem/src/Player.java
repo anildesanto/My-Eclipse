@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class Player 
 {
@@ -30,7 +31,8 @@ public class Player
 
 	public String printCoordinates()
 	{
-		return "Player Coordinates: " + getCoordinates()[0] +", "+getCoordinates()[1];
+		DecimalFormat df = new DecimalFormat("0.00");
+		return "Player Coordinates: " + df.format(getCoordinates()[0]) +", "+ df.format(getCoordinates()[1]);
 	}
 	public float distanceCheck()
 	{

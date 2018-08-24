@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class WorldItem 
 {
@@ -26,7 +27,8 @@ public class WorldItem
 	}
 	public String printCoordinates()
 	{
-		return "Item Coordinates: " + getCoordinates()[0] +", "+getCoordinates()[1];
+		DecimalFormat df = new DecimalFormat("#.00");
+		return "Item Coordinates: " + df.format(getCoordinates()[0]) +", "+ df.format(getCoordinates()[1]);
 	}
 	public String description()
 	{
@@ -44,15 +46,8 @@ public class WorldItem
 	}
 	public float distanceCheck(Player player)
 	{
-		float west = 0;
-		float north = 0;
-		if(getCoordinates()[1] - player.getCoordinates()[1] != 0)
-		north = getCoordinates()[0] - player.getCoordinates()[0];
-		
-		if(getCoordinates()[1] - player.getCoordinates()[1] != 0)
-		west = getCoordinates()[1] - player.getCoordinates()[1];
-		
-		return north + west;
+		float north =  getCoordinates()[0] - player.getCoordinates()[0];
+		float west = getCoordinates()[1] - player.getCoordinates()[1];
+		return (float)Math.sqrt((Math.pow(north, 2)+Math.pow(west, 2)));
 	}
-	
 }
