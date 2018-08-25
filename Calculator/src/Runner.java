@@ -5,10 +5,8 @@ public class Runner {
 	{
 		Calculator calculate= new Calculator();
 		
-		calculate.multiplier(5,3,15);
-		System.out.println(calculate.multiplier(5,3,15));
-		
-
+		calculate.operation(5,3,15);
+		System.out.println(calculate.operation(5,3,15));
 	}
 
 }

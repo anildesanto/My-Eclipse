@@ -1,50 +1,38 @@
 
 public class Calculator 
 {
-	public String multiplier(int a,int b,int c)
-	
+	public String operation(int a,int b,int c)
 	{
 		String result = "Result is ";
+		// a check
+		result += operate(a,b,c);
+		// b check
+		result += operate(b,c,a);
+		//c check
+		result += operate(c,b,a);
+		return result;
+	}
+	public String operate(int first, int second, int third)
+	{
 		//string division
 		String divisionOperator= "/";
 		String multiplyOperator= "x";
-		// a check
-		result += multiply(a,b,c,multiplyOperator);
-		result += divide(a,b,c,divisionOperator);
-		
-		// b check
-		result += multiply(b,c,a,multiplyOperator);
-		result += divide(b,a,c,divisionOperator);
-		
-		//c check
-		result += multiply(c,b,a,multiplyOperator);
-		result += divide(c,a,b,divisionOperator);
-		
-		return result;
-	}
-	public String multiply(int first, int second, int third, String multiply)
-	{
 		String result1 = "";
 		if (first*second==third) 
 		{
-			result1 += stringResult(first, second, third, multiply);
+			result1 += stringResult(first, second, third, multiplyOperator);
 		}
 		if (first*third==second)
 		{
-			result1 +=  stringResult( first,  third, second, multiply);	
+			result1 +=  stringResult( first,  third, second, multiplyOperator);	
 		}
-		return result1;
-	}
-	public String divide(int first, int second, int third, String devide)
-	{
-		String result1 = "";
 		if (first/second==third) 
 		{
-			result1 += stringResult(first, second, third, devide);
+			result1 += stringResult(first, second, third, divisionOperator);
 		}
 		if (first/third==second)
 		{
-			result1 +=  stringResult( first,  third, second, devide);	
+			result1 +=  stringResult( first,  third, second, divisionOperator);	
 		}
 		return result1;
 	}
